@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <label for="un">Username: </label><input id="txtUsername" type="text"><br><br>
+     <label for="pw">Password: </label> <input id="txtPassword" type="password"><br><br>
+     <input id="btnLogin" type="button" value ="Login"  > 
+    <script>
+        const btnLogin = document.querySelector("#btnLogin");
+        btnLogin.onclick = next;
+
+        function next(){
+        //window.location.href = "./Assignment2_logout.html";
+        const txtUsername = document.querySelector("#txtUsername");
+         const username = txtUsername.value;
+         const txtPassword =document.querySelector("#txtPassword");
+         const password = txtPassword.value;
+
+        
+         if(username == "admin" && password == "1234"){
+            window.location.replace ("./Assignment2_logout.html");
+         }else if(username == "" && password == ""){
+            alert("Incomplete Input");
+         }else{
+            alert("Login Fail");
+         }
+
+           
+        }
+
+    </script>
+</body>
+</html>

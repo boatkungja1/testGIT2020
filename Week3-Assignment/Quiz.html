@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $("#btnSubmit").click(function(){
+        let score = 0;
+        //first question
+        const one = $("input[name='drink']:checked").val();
+        if(one == "Honey"){
+            score++;
+        }
+        //second question
+     let credit = $("#credit").val();
+       //alert(credit);
+       if(credit == "3"){
+      score++;
+       }
+
+
+        //summary
+    $("h5").css("color","blue");
+    $("h5").text("Score = " + score);
+          });
+        });
+    </script>
+</head>
+<body>
+    <h3>1. Whic is yellow ?</h3>
+    <input type="radio" name="drink" value="Honey" >a. Honey
+    <input type="radio" name="drink" value="Soda">b. Soda
+    <input type="radio" name="drink" value="Coke">c. Coke 
+    <input type="radio" name="drink" value="Water">d. Water
+    <input type="radio" name="drink"  checked value="All" >e. All
+    <h3>2. How many credits for Web pro ?</h3>
+    <select id="credit">
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+    </select>
+    <p><button id="btnSubmit">Submit</button></p>
+    <h5>Score = 0</h5>
+</body>
+</html>

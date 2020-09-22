@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+</head>
+<h1>Calorie Calculator</h1>
+
+<body>
+    <h3>Breakfast</h3>
+    <br>
+    <input type="checkbox" name="breakfast" value="231"> Croissant (231 cal);<br>
+    <input type="checkbox" name="breakfast" value="301"> Burger (301 cal);<br>
+    <input type="checkbox" name="breakfast" value="312"> French Fries (312 cal);<br>
+    <br>
+    <h3>Lunch</h3>
+    <br>
+    Pizza <select id="piece">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select> Slices<br>
+    Each slice is 212 Cal.
+
+    <br>
+
+    <button onclick="getCalculate()">Calculate</button>
+    
+    <script>
+        function getCalculate() {
+            var breakfasts = document.querySelectorAll("input[name = 'breakfast']:checked");
+            //alert(breakfast[0].value)
+            var cal = 0;
+            for (var i = 0; i < breakfasts.length; i++) {
+                cal += parseInt(breakfasts[i].value);
+
+            }
+            //get lunch
+            var pieces = document.querySelector("#piece");
+            var y = 0;
+            var y = y + pieces.options[pieces.selectedIndex].value * 212;
+
+            //total
+            var totalCalories = cal + y;
+            alert("Total calories = " + totalCalories + "Cal");
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

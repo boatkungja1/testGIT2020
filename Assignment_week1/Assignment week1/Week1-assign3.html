@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        h1 {
+            text-align: center;
+            color:gray;
+        }
+
+        #btnlogin {
+            font-size: 20px;
+            background-color: green;
+            color: white;
+        }
+
+        .bcenter {
+            text-align: center;
+        }
+
+        #btnreset {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+
+    <div class="bcenter">
+        <form id="formUP">
+            <label for="username">Username: </label>
+            <input id="txtUsername" type="text"><br><br>
+            <label for="password">Password: </label> 
+            <input id="txtPassword" type="password"><br><br>
+        </form>
+
+
+        <button id="btnlogin" type="button" onclick="login()">LOGIN</button>
+        <button id="btnreset" type="button" onclick="reset()" value="Reset form">RESET</button><br><br>
+    </div>
+    
+
+
+    <script>
+        function login() {
+            const txtUsername = document.querySelector("#txtUsername");
+            const username = txtUsername.value;
+            const txtPassword = document.querySelector("#txtPassword");
+            const password = txtPassword.value;
+
+
+            if (username == "" && password == "") {
+                alert("Incomplete Inputs");
+            } else if (username == "admin" && password == "1234") {
+                alert("Login Successful");
+            } else {
+                alert("Login Fail");
+            }
+
+
+
+
+
+        }
+        function reset() {
+            document.querySelector("#formUP").reset();
+        }
+
+    </script>
+</body>
+
+</html>

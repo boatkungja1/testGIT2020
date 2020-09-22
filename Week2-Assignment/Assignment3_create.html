@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign3</title>
+</head>
+
+<body>
+    <input id="txtsearch" type="text"><input id="btncreate" type="button" value="CREATE" onclick="ceqr()"><br><br>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <canvas id="qrcode"></canvas>
+    <script>
+
+
+
+        function ceqr() {
+            var qrce = document.getElementById("txtsearch").value;
+            var qr;
+            qr = new QRious({
+                element: document.getElementById('qrcode'),
+                size: 200,
+            });
+            qr.set({
+                foreground: 'black',
+                size: 200,
+                value: qrce
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign1</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addBottom()">Add Row at Bottom</button>
+    <button onclick="addTop()">Add Row at Top</button>
+    <p id="pDisplay"></p>
+    <table id="Display"></table>
+    <script>
+        let person = [
+            { id: "6331302001", name: "Piti", age: 19 },
+            { id: "6331302002", name: "Aden", age: 18 },
+            { id: "6331302003", name: "Jiraya", age: 17 }
+        ];
+        let Display = document.getElementById("Display"); 
+        //create table and display
+        createTable();
+        function createTable() {
+            let result = "<tr><th>id</th> <th>name</th> <th>age</th> <th>action</th></tr>";
+            for (let i = 0; i < person.length; i++) {
+                result = result += "<tr> <td> "+person[i].id+" </td> <td>"+person[i].name+"</td> <td>"+person[i].age+"</td>  <td> <button onclick='delet(this)' >Delete</td></tr>";
+            }
+             Display.innerHTML = result;
+        }
+        function addBottom() {
+            //add at the end of the array
+            person.push({id: "63301302xx", name: "AA", age:19});
+            createTable();
+        }
+        function addTop() {
+            //add at the top of the array
+            person.unshift({id: "63301302xx", name: "Test", age:23});
+            createTable();
+        }
+        function delet(r){        
+            var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("Display").deleteRow(i);
+        }
+    </script>
+
+</body>
+</html>
+

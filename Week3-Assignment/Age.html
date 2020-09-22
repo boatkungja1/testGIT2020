@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnCal").click(function(){
+                //alert("Calculate");
+                let txtAge = $('#txtAge').val();
+                let age = parseInt(txtAge);
+                
+                if(isNaN(age)) {
+                    $("#result").html("Sorry , Only number");
+                    return;
+                }
+                else if(age <= 0 ){
+                    $("#result").html("Sorry , positive number");
+                    return;
+                }
+                let birthYear = 2563 - age;
+                 $("#result").html(" You were born in " + birthYear);
+            });
+        });
+    </script>
+</head>
+<body>
+    Age : <input type="text"  id="txtAge">
+    <input type="button" value="Calculate" id="btnCal">
+    <p id="result"></p>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Online</title>
+    <script src="./Week3-Assignment/jquery-3.5.1.min.js"></script>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        #price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #vat {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #totalprice {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tDisplay">
+        <tr>
+            <th>Select</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="Check1"></td>
+            <td><img src="./Week4_Intregal/ring.jpg" alt="ring" width="200" height="200"></td>
+            <td>300 Bath</td>
+            <td><input id="select1" type="number" value="0" style="width: 60px;"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="Check2"></td>
+            <td><img src="./Week4_Intregal/bacelet.jpg" alt="bracelet" width="300" height="200"></td>
+            <td>420 Bath</td>
+            <td><input id="select2" type="number" value="0" style="width: 60px;"></td>
+        </tr>
+
+    </table>
+    <br>
+    <button id="btnbuy">Buy</button>
+    <p id="price">Price = </p>
+    <p id="vat">VAT (7%) = </p>
+    <p id="totalprice">Total Price = </p>
+    <script>
+        $(document).ready(function () {
+            $("#btnbuy").click(function () {
+
+                if ($(Check1).is(':checked')) {
+
+                    let select1 = $("#select1").val();
+                    let ring = parseInt(select1);
+                    var result1 = select1 * 300;
+                    vat1 = (result1) * 0.07;
+                    var totalresult = result1 + vat1;
+                    $("#price").text("Price = " + result1 + " Bath");
+                    $("#vat").text("VAT (7%) = " + vat1 + " Bath ");
+                    $("#totalprice").text("Total Price = " + totalresult + " Bath ");
+                }
+
+                if ($(Check2).is(':checked')) {
+
+                    let select2 = $("#select2").val();
+                    let bracelet = parseInt(select2);
+                    var result2 = select2 * 420;
+                    vat2 = (result2) * 0.07;
+                    var totalresult = result2 + vat2;
+                    $("#price").text("Price = " + result2 + " Bath ");
+                    $("#vat").text("VAT (7%) = " + vat2 + " Bath");
+                    $("#totalprice").text("Total Price = " + totalresult + " Bath");
+                }
+                if (($(Check1).is(':checked')) && ($(Check2).is(':checked'))) {
+
+                    let select1 = $("#select1").val();
+                    let ring = parseInt(select1);
+                    var result1 = select1 * 300;
+                    vat1 = (result1) * 0.07;
+                    var totalresult = result1 + vat1;
+
+                    let select2 = $("#select2").val();
+                    let bracelet = parseInt(select2);
+                    var result2 = select2 * 420;
+                    vat2 = (result2) * 0.07;
+                    var resultall2 = vat2;
+
+                    var allprice = result1 + result2;
+                    var totalvat = vat1 + vat2;
+                    var resultvat = allprice + (vat1 + vat2);
+
+                    $("#price").text("Price = " + allprice + " Bath ");
+                    $("#vat").text("VAT (7%) = " + totalvat + " Bath");
+                    $("#totalprice").text("Total Price = " + resultvat + " Bath");
+
+                }
+
+
+
+
+
+
+
+
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>

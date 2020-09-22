@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wil-Week2-Assign 2</title>
+</head>
+<body>
+    <h1>Exponential a<sup>b</sup></h1>
+    a
+    <input type="text" id="txtA"  > <br><br>
+    b
+    <input type="text" id="txtB"> <br><br>
+    <input type="button" value="Calculate" onclick="calculate()" >
+
+    
+    <p>Output: 0</p>
+    <script>
+        function calculate() {
+        const a = parseFloat(document.getElementById("txtA").value);
+        const b = parseFloat(document.getElementById("txtB").value);
+          if(isNaN(a) || isNaN(b)){
+              alert("Input only Integer");
+          }else{
+           result = Math.pow(a,b);
+              }
+              document.querySelector("p").innerHTML = "Output = " + result;      
+          }
+
+                
+
+           
+    </script>
+</body>
+</html>

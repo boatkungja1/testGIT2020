@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Survey</h3>
+    <p>5 = Excellent, 1 = Very poor</p>
+    &emsp; &emsp; &emsp; &emsp;&emsp; <strong>Question</strong> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+    1 2 3 4 5
+    <div>
+        1.How do you like popcorn? &emsp;&emsp;&emsp; &emsp;&emsp; <input type="radio" name="qt1" value="1"><input
+            type="radio" name="qt1" value="2"><input type="radio" name="qt1" value="3"><input type="radio"
+            name="qt1" value="4"><input type="radio" name="qt1" value="5"> <br>
+        2.How good is your programming skill?&emsp; <input type="radio" name="qt2" value="1"><input type="radio"
+            name="qt2" value="2"><input type="radio" name="qt2" value="3"><input type="radio" name="qt2"
+            value="4"><input type="radio" name="qt2" value="5"> <br>
+        3.How good is your English? &emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="radio" name="qt3" value="1"><input type="radio" name="qt3" value="2"><input type="radio"
+            name="qt3" value="3"><input type="radio" name="qt3" value="4"><input type="radio" name="qt3"
+            value="5">
+        <br>
+        <p id= "av">Average Score: </p>
+        <br>
+        <button type="button" onclick="getScore()">Submit</button>
+    </div>
+    <script>
+        function getScore() {
+            var qt1 = document.querySelector("input[name = 'qt1']:checked").value;
+            var qt11 = parseInt(qt1);
+            var qt2 = document.querySelector("input[name = 'qt2']:checked").value;
+            var qt22 = parseInt(qt2);
+            var qt3 = document.querySelector("input[name = 'qt3']:checked").value;
+            var qt33 = parseInt(qt3);
+            var result = (qt11 + qt22 + qt33) /3;
+             document.querySelector("#av").innerHTML = "Average Score: " + result;
+        }
+    </script>
+</body>
+</html>

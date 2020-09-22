@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: orange;
+        }
+
+        body {
+            background-color: rgb(100, 120, 225);
+        }
+
+        .normal {
+            font-size: 20px;
+            color: white;
+        }
+
+        input[type="button"] {
+            font-size: 16px;
+        }
+
+        .bcenter {
+            text-align: center;
+        }
+
+        #bttChange {
+            background-color: green;
+            color: white;
+        }
+
+        #bttReset {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="title">Hello World</p>
+    <p class="normal">My First Web App</p>
+    <p class="normal">I love coding!</p>
+    <div class="bcenter">
+        <input type="button" id="bttChange" value="CHANGE" onclick=" ">
+        <input type="button" id="bttReset" value="RESET" onclick=" ">
+    </div>
+
+    <script>
+        function changBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>

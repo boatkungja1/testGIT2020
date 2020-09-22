@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .div {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            background: black;
+        }
+    </style>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let color = { red: 0, green: 0, blue: 0 };
+            $("#Red").keyup(function () {
+                color.red = parseInt($(this).val());
+                update(color);
+            });
+            $("#Green").keyup(function () {
+                color.green = parseInt($(this).val());
+                update(color);
+            });
+            $("#Blue").keyup(function () {
+                color.blue = parseInt($(this).val());
+                update(color);
+            });
+            function update(color_) {
+                $("#display").css("background-color", `rgb(${color_.red},${color_.green}, ${color_.blue})`);
+            };
+        }); 
+    </script>
+</head>
+<body>
+    <p>
+    <div class="div" id="display"></div>
+    </p>
+    Red: <input type="text" id="Red" placeholder="0" /><br><br>
+    Green: <input type="text" id="Green" placeholder="0" /><br><br>
+    Blue: <input type="text" id="Blue" placeholder="0" />
+</body>
+</html>

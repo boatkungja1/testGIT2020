@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var answer = 0;
+            var chances = 0;
+            function random() {
+                answer = Math.floor(Math.random() * 10);
+                chances = 3;
+                $("#message").html(`You have ${chances} chances`);
+
+            }
+
+            random();
+
+            $("#btnguess").click(function () {
+                let guess = $("#num").val();
+                if (answer == guess && chances >= 1) {
+                    $("#message").html(`You have ${chances} chances <p>You win!</p>`)
+                    $(this).prop('disabled', true);
+                }
+                if (guess > answer && chances >= 1) {
+                    chances--;
+                    $("#message").html(`You have ${chances} chances <p>Too high!, try again</p>`);
+                }
+                if (guess < answer && chances >= 1) {
+                    chances--;
+                    $("#message").html(`You have ${chances} chances <p>Too small!, try again</p>`);
+                }
+                if (chances == 0 && guess != answer) {
+                    $("#message").html(`You have ${chances} chances <p>You lose!, the correct answer is ${answer}</p>`);
+                    $(this).prop('disabled', true);
+                }
+
+            });
+
+            $("#btnreplay").click(function () {
+                random();
+                $("#btnguess").prop('disabled', false);
+                $("#num").val("");
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <h2>Guessing Game</h2>
+    <h2>Input a number from 0-9</h2>
+    <p id="message">You have 3 chances</p>
+    <input type="text" id="num" placeholder="0-9" /><br><br>
+    <button type="button" id="btnguess"><strong>Guess</strong></button>
+    <button type="button" id="btnreplay"><strong>Replay</strong></button>
+</body>
+
+</html>

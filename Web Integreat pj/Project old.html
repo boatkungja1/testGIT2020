@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress 1</title>
+   <style>
+       table,td,th{
+        border: 1px solid black;
+       }table{
+        border-collapse: collapse;
+       }
+       p{
+           font-weight: bold;
+       }
+     
+         
+     
+        #txtHead {
+            font-size: 35px;
+        }
+        #txtHide {
+            border: 2px solid white;
+        }
+        #txtBlack {
+            border: 3px solid;
+        }
+    
+   </style>
+</head>
+<body>
+    <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Senior Project 2</h3>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Evaluation Form </h3>
+<p><b>Progress 1 (around 40% of total work, 20 scores)</b></p>
+    <p>Advisor(10scores)  Date................................. Signature...............................</p>   
+    <table id="tDisplay">
+        
+        <tr>
+            <td>Topic</td>
+             <th>Very Poor <br>(1)</th>
+            <th>Poor <br>(2)</th>
+             <th>Good <br>(3)</th>
+            <th>Very Good <br>(4)</th>
+            <th>Excellent <br>(5)</th>
+        </tr>
+        <tr>
+            <td>1. There is an evident advancement from <br>
+                SeniorProject 1</td>
+               
+                <th> <input type="radio" name="q1" value="1"></th>
+                <th> <input type="radio" name="q1" value="2"></th>
+                <th> <input type="radio" name="q1" value="3"></th>
+                <th> <input type="radio" name="q1" value="4"></th>
+                <th> <input type="radio" name="q1" value="5"></th>
+              
+        </tr>
+     <tr>
+       <td >2. The students consult and report to <br>
+        advisorregularly </td>
+        <th> <input type="radio" name="q2" value="1"></th>
+        <th> <input type="radio" name="q2" value="2"></th>
+        <th> <input type="radio" name="q2" value="3"></th>
+        <th> <input type="radio" name="q2" value="4"></th>
+        <th> <input type="radio" name="q2" value="5"></th>
+     </tr>
+     <tr>
+         <td>3. There are good teamwork and job division <br>
+            (for group project) or a student plans his/her <br>
+            work properly (for individual project)</td>
+            <th> <input type="radio" name="q3" value="1"></th>
+                <th> <input type="radio" name="q3" value="2"></th>
+                <th> <input type="radio" name="q3" value="3"></th>
+                <th> <input type="radio" name="q3" value="4"></th>
+                <th> <input type="radio" name="q3" value="5"></th>
+     </tr>
+   <tr>
+       <td>4. The students can research how to solve the <br>
+        problems and are able to study new or required <br>
+        technologies and tools by themselves</td>
+        <th> <input type="radio" name="q4" value="1"></th>
+        <th> <input type="radio" name="q4" value="2"></th>
+        <th> <input type="radio" name="q4" value="3"></th>
+        <th> <input type="radio" name="q4" value="4"></th>
+        <th> <input type="radio" name="q4" value="5"></th>
+    </tr>
+
+   <tr>
+       <td>5. The current progress reaches 40%</td>
+       <th> <input type="radio" name="q5" value="1" ></th>
+       <th> <input type="radio" name="q5" value="2" ></th>
+       <th> <input type="radio" name="q5" value="3" ></th>
+       <th> <input type="radio" name="q5" value="4" ></th>
+       <th> <input type="radio" name="q5" value="5" ></th>
+
+
+    </tr>
+    <tr>
+        <td align=center ><strong> Total score (sum*0.8)</strong></td>
+        <th id="pg11" colspan=5></th>
+    </tr>
+
+    </table>
+
+    <button type ="button" onclick="getRadio11()">Calculate</button>
+     
+    <script>
+
+    function getRadio11(){
+        var q1 =document.querySelector("input[name='q1']:checked").value;
+        var q11 = parseInt(q1);
+        var q2 =document.querySelector("input[name='q2']:checked").value;
+        var q22 = parseInt(q2);
+        var q3 =document.querySelector("input[name='q3']:checked").value;
+        var q33 = parseInt(q3);
+        var q4 =document.querySelector("input[name='q4']:checked").value;
+        var q44 = parseInt(q4);
+        var q5 =document.querySelector("input[name='q5']:checked").value;
+        var q55 = parseInt(q5);
+        var result1 = q11+q22+q33+q44+q55;
+        var result = result1*0.8;
+
+         //alert(result);
+        document.getElementById("pg11").innerHTML =result;
+        
+    }
+
+    </script>
+
+<p>Committee 1 (5 scores)  Date................................. Signature...............................</p>
+<table>
+    <tr>
+        <td>Topic</td>
+         <th>Very Poor <br>(1)</th>
+        <th>Poor <br>(2)</th>
+         <th>Good <br>(3)</th>
+        <th>Very Good <br>(4)</th>
+        <th>Excellent <br>(5)</th>
+    </tr>
+    <tr>
+        
+        <td>1. There is an evident advancement from <br>
+            SeniorProject 1</td>
+           
+            <th> <input type="radio" name="q21" value="1"></th>
+            <th> <input type="radio" name="q21" value="2"></th>
+            <th> <input type="radio" name="q21" value="3"></th>
+            <th> <input type="radio" name="q21" value="4"></th>
+            <th> <input type="radio" name="q21" value="5"></th>
+          
+    </tr>
+ <tr>
+   <td >2. The students consult and report to <br>
+    advisorregularly </td>
+    <th> <input type="radio" name="q22" value="1"></th>
+    <th> <input type="radio" name="q22" value="2"></th>
+    <th> <input type="radio" name="q22" value="3"></th>
+    <th> <input type="radio" name="q22" value="4"></th>
+    <th> <input type="radio" name="q22" value="5"></th>
+ </tr>
+ <tr>
+     <td>3. There are good teamwork and job division <br>
+        (for group project) or a student plans his/her <br>
+        work properly (for individual project)</td>
+          <th> <input type="radio" name="q23" value="1"></th>
+            <th> <input type="radio" name="q23" value="2"></th>
+            <th> <input type="radio" name="q23" value="3"></th>
+            <th> <input type="radio" name="q23" value="4"></th>
+            <th> <input type="radio" name="q23" value="5"></th>
+ </tr>
+<tr>
+   <td>4. The students can research how to solve the <br>
+    problems and are able to study new or required <br>
+    technologies and tools by themselves</td>
+    <th> <input type="radio" name="q24" value="1"></th>
+    <th> <input type="radio" name="q24" value="2"></th>
+    <th> <input type="radio" name="q24" value="3"></th>
+    <th> <input type="radio" name="q24" value="4"></th>
+    <th> <input type="radio" name="q24" value="5"></th>
+</tr>
+
+<tr>
+   <td>5. The current progress reaches 40%</td>
+   <th> <input type="radio" name="q25" value="1" ></th>
+   <th> <input type="radio" name="q25" value="2" ></th>
+   <th> <input type="radio" name="q25" value="3" ></th>
+   <th> <input type="radio" name="q25" value="4" ></th>
+   <th> <input type="radio" name="q25" value="5" ></th>
+
+
+</tr>
+<tr>
+    <td align=center ><strong> Total score (sum*0.2)</strong></td>
+    <th id="pg12" colspan=5></th>
+</tr>
+
+ </table>
+ <button type ="button" onclick="getRadio12()">Calculate</button>  
+   <script>
+       
+    function getRadio12(){
+        var q21 =document.querySelector("input[name='q21']:checked").value;
+        var q211 = parseInt(q21);
+        var q22 =document.querySelector("input[name='q22']:checked").value;
+        var q222 = parseInt(q22);
+        var q23 =document.querySelector("input[name='q23']:checked").value;
+        var q233 = parseInt(q23);
+        var q24 =document.querySelector("input[name='q24']:checked").value;
+        var q244 = parseInt(q24);
+        var q25 =document.querySelector("input[name='q25']:checked").value;
+        var q255 = parseInt(q25);
+        var result1 = q211+q222+q233+q244+q255;
+        var result = result1*0.2;
+
+         //alert(result);
+        document.getElementById("pg12").innerHTML =result;
+        
+    }
+
+   
+   </script>
+
+   <p>Committee 2(5 scores)  Date................................. Signature...............................</p>
+   <table>
+       <tr>
+           <td>Topic</td>
+            <th>Very Poor <br>(1)</th>
+           <th>Poor <br>(2)</th>
+            <th>Good <br>(3)</th>
+           <th>Very Good <br>(4)</th>
+           <th>Excellent <br>(5)</th>
+       </tr>
+       <tr>
+           
+           <td>1. There is an evident advancement from <br>
+               SeniorProject 1</td>
+              
+               <th> <input type="radio" name="q31" value="1"></th>
+               <th> <input type="radio" name="q31" value="2"></th>
+               <th> <input type="radio" name="q31" value="3"></th>
+               <th> <input type="radio" name="q31" value="4"></th>
+               <th> <input type="radio" name="q31" value="5"></th>
+             
+       </tr>
+    <tr>
+      <td >2. The students consult and report to <br>
+       advisorregularly </td>
+       <th> <input type="radio" name="q32" value="1"></th>
+       <th> <input type="radio" name="q32" value="2"></th>
+       <th> <input type="radio" name="q32" value="3"></th>
+       <th> <input type="radio" name="q32" value="4"></th>
+       <th> <input type="radio" name="q32" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division <br>
+           (for group project) or a student plans his/her <br>
+           work properly (for individual project)</td>
+             <th> <input type="radio" name="q33" value="1"></th>
+               <th> <input type="radio" name="q33" value="2"></th>
+               <th> <input type="radio" name="q33" value="3"></th>
+               <th> <input type="radio" name="q33" value="4"></th>
+               <th> <input type="radio" name="q33" value="5"></th>
+    </tr>
+   <tr>
+      <td>4. The students can research how to solve the <br>
+       problems and are able to study new or required <br>
+       technologies and tools by themselves</td>
+       <th> <input type="radio" name="q34" value="1"></th>
+       <th> <input type="radio" name="q34" value="2"></th>
+       <th> <input type="radio" name="q34" value="3"></th>
+       <th> <input type="radio" name="q34" value="4"></th>
+       <th> <input type="radio" name="q34" value="5"></th>
+   </tr>
+   
+   <tr>
+      <td>5. The current progress reaches 40%</td>
+      <th> <input type="radio" name="q35" value="1" ></th>
+      <th> <input type="radio" name="q35" value="2" ></th>
+      <th> <input type="radio" name="q35" value="3" ></th>
+      <th> <input type="radio" name="q35" value="4" ></th>
+      <th> <input type="radio" name="q35" value="5" ></th>
+   
+   
+   </tr>
+   <tr>
+       <td align=center ><strong> Total score (sum*0.2)</strong></td>
+       <th id="pg13" colspan=5></th>
+   </tr>
+   
+    </table>
+    <button type ="button" onclick="getRadio13()">Calculate</button>  
+
+      <script>
+          
+       function getRadio13(){
+           var q31 =document.querySelector("input[name='q31']:checked").value;
+           var q311 = parseInt(q31);
+           var q32 =document.querySelector("input[name='q32']:checked").value;
+           var q322 = parseInt(q32);
+           var q33 =document.querySelector("input[name='q33']:checked").value;
+           var q333 = parseInt(q33);
+           var q34 =document.querySelector("input[name='q34']:checked").value;
+           var q344 = parseInt(q34);
+           var q35 =document.querySelector("input[name='q35']:checked").value;
+           var q355 = parseInt(q35);
+           var result1 = q311+q322+q333+q344+q355;
+           var result = result1*0.2;
+   
+            //alert(result);
+           document.getElementById("pg13").innerHTML =result;
+           
+       }
+      
+      </script>
+   <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Senior Project 2</h3>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Evaluation Form </h3>
+<p><b>Progress 2 (around 80% of total work, 20 scores)</b></p>
+<p><b>Advisor (10 scores)</b> Date................................. Signature............................... </p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. There is an evident advancement from Progress 1</td>
+        <th> <input type="radio" name="p11" value="1"></th>
+        <th> <input type="radio" name="p11" value="2"></th>
+        <th> <input type="radio" name="p11" value="3"></th>
+        <th> <input type="radio" name="p11" value="4"></th>
+        <th> <input type="radio" name="p11" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students consult and report to advisor regularly</td>
+        <th> <input type="radio" name="p12" value="1"></th>
+        <th> <input type="radio" name="p12" value="2"></th>
+        <th> <input type="radio" name="p12" value="3"></th>
+        <th> <input type="radio" name="p12" value="4"></th>
+        <th> <input type="radio" name="p12" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There is a good teamwork (for group project) or a student
+            <br>plans his/her work properly (for individual project)</td>
+        <th> <input type="radio" name="p13" value="1"></th>
+        <th> <input type="radio" name="p13" value="2"></th>
+        <th> <input type="radio" name="p13" value="3"></th>
+        <th> <input type="radio" name="p13" value="4"></th>
+        <th> <input type="radio" name="p13" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. 4. The students answer all questions and correct
+            <br>all problems found in Progress 1</td>
+        <th> <input type="radio" name="p14" value="1"></th>
+        <th> <input type="radio" name="p14" value="2"></th>
+        <th> <input type="radio" name="p14" value="3"></th>
+        <th> <input type="radio" name="p14" value="4"></th>
+        <th> <input type="radio" name="p14" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The current progress reaches 80% Comments </td>
+        <th> <input type="radio" name="p15" value="1"></th>
+        <th> <input type="radio" name="p15" value="2"></th>
+        <th> <input type="radio" name="p15" value="3"></th>
+        <th> <input type="radio" name="p15" value="4"></th>
+        <th> <input type="radio" name="p15" value="5"></th>
+    </tr>
+    <tr>
+        <td>
+            <center><b>Total score (sum*0.4)</center>
+        </td>
+        <th id = "pg21" colspan=5></th>
+    </tr>
+</table>
+<button type ="button" onclick="getRadio21()">Calculate</button>
+<script>
+function getRadio21(){
+    var p11 =document.querySelector("input[name='p11']:checked").value;
+    var p111 = parseInt(p11);
+    var p12 =document.querySelector("input[name='p12']:checked").value;
+    var p112 = parseInt(p12);
+    var p13 =document.querySelector("input[name='p13']:checked").value;
+    var p113 = parseInt(p13);
+    var p14 =document.querySelector("input[name='p14']:checked").value;
+    var p114 = parseInt(p14);
+    var p15 =document.querySelector("input[name='p15']:checked").value;
+    var p115 = parseInt(p15);
+    var result1 = p111+p112+p113+p114+p115;
+    var result = result1*0.4;
+     //alert(result);
+    document.getElementById("pg21").innerHTML =result;
+}
+</script>
+<br>
+<br>
+<p><b>Committee 1 (5 scores)</b> Date................................. Signature...............................</p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. There is an evident advancement from Progress 1</td>
+        <th> <input type="radio" name="p21" value="1"></th>
+        <th> <input type="radio" name="p21" value="2"></th>
+        <th> <input type="radio" name="p21" value="3"></th>
+        <th> <input type="radio" name="p21" value="4"></th>
+        <th> <input type="radio" name="p21" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students present and answer questions properly </td>
+        <th> <input type="radio" name="p22" value="1"></th>
+        <th> <input type="radio" name="p22" value="2"></th>
+        <th> <input type="radio" name="p22" value="3"></th>
+        <th> <input type="radio" name="p22" value="4"></th>
+        <th> <input type="radio" name="p22" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division (for group project)
+            <br> or a student plans his/her work properly (for individual project)</td>
+        <th> <input type="radio" name="p23" value="1"></th>
+        <th> <input type="radio" name="p23" value="2"></th>
+        <th> <input type="radio" name="p23" value="3"></th>
+        <th> <input type="radio" name="p23" value="4"></th>
+        <th> <input type="radio" name="p23" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. The students answer all questions and correct
+            <br>all problems found in Progress 1</td>
+        <th> <input type="radio" name="p24" value="1"></th>
+        <th> <input type="radio" name="p24" value="2"></th>
+        <th> <input type="radio" name="p24" value="3"></th>
+        <th> <input type="radio" name="p24" value="4"></th>
+        <th> <input type="radio" name="p24" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The current progress reaches 80% Comments </td>
+        <th> <input type="radio" name="p25" value="1"></th>
+        <th> <input type="radio" name="p25" value="2"></th>
+        <th> <input type="radio" name="p25" value="3"></th>
+        <th> <input type="radio" name="p25" value="4"></th>
+        <th> <input type="radio" name="p25" value="5"></th>
+    </tr>
+    <tr>
+        <td>
+            <center><b>Total score (sum*0.2)</center>
+        </td>
+        <th id = "pg22" colspan=5></th>
+    </tr>
+
+</table>
+<button type ="button" onclick="getRadio22()">Calculate</button>
+<script>
+function getRadio22(){
+    var p21 =document.querySelector("input[name='p21']:checked").value;
+    var p221 = parseInt(p21);
+    var p22 =document.querySelector("input[name='p22']:checked").value;
+    var p222 = parseInt(p22);
+    var p23 =document.querySelector("input[name='p23']:checked").value;
+    var p223 = parseInt(p23);
+    var p24 =document.querySelector("input[name='p24']:checked").value;
+    var p224 = parseInt(p24);
+    var p25 =document.querySelector("input[name='p25']:checked").value;
+    var p225 = parseInt(p25);
+    var result1 = p221+p222+p223+p224+p225;
+    var result = result1*0.2;
+     //alert(result);
+    document.getElementById("pg22").innerHTML =result;
+}
+</script>
+<br>
+<br>
+<p><b>Committee 2 (5 scores)</b> Date................................. Signature...............................</p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. There is an evident advancement from Progress 1</td>
+        <th> <input type="radio" name="p31" value="1"></th>
+        <th> <input type="radio" name="p31" value="2"></th>
+        <th> <input type="radio" name="p31" value="3"></th>
+        <th> <input type="radio" name="p31" value="4"></th>
+        <th> <input type="radio" name="p31" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students present and answer questions properly </td>
+        <th> <input type="radio" name="p32" value="1"></th>
+        <th> <input type="radio" name="p32" value="2"></th>
+        <th> <input type="radio" name="p32" value="3"></th>
+        <th> <input type="radio" name="p32" value="4"></th>
+        <th> <input type="radio" name="p32" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division (for group project)
+            <br> or a student plans his/her work properly (for individual project)</td>
+        <th> <input type="radio" name="p33" value="1"></th>
+        <th> <input type="radio" name="p33" value="2"></th>
+        <th> <input type="radio" name="p33" value="3"></th>
+        <th> <input type="radio" name="p33" value="4"></th>
+        <th> <input type="radio" name="p33" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. The students answer all questions and correct
+            <br>all problems found in Progress 1</td>
+        <th> <input type="radio" name="p34" value="1"></th>
+        <th> <input type="radio" name="p34" value="2"></th>
+        <th> <input type="radio" name="p34" value="3"></th>
+        <th> <input type="radio" name="p34" value="4"></th>
+        <th> <input type="radio" name="p34" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The current progress reaches 80% Comments </td>
+        <th> <input type="radio" name="p35" value="1"></th>
+        <th> <input type="radio" name="p35" value="2"></th>
+        <th> <input type="radio" name="p35" value="3"></th>
+        <th> <input type="radio" name="p35" value="4"></th>
+        <th> <input type="radio" name="p35" value="5"></th>
+    </tr>
+    <tr>
+        <td>
+            <center><b>Total score (sum*0.2)</center>
+        </td>
+        <th id = "pg23" colspan=5></th>
+    </tr>
+
+</table>
+<button type ="button" onclick="getRadio23()">Calculate</button>
+<script>
+function getRadio23(){
+    var p31 =document.querySelector("input[name='p31']:checked").value;
+    var p331 = parseInt(p31);
+    var p32 =document.querySelector("input[name='p32']:checked").value;
+    var p332 = parseInt(p32);
+    var p33 =document.querySelector("input[name='p33']:checked").value;
+    var p333 = parseInt(p33);
+    var p34 =document.querySelector("input[name='p34']:checked").value;
+    var p334 = parseInt(p34);
+    var p35 =document.querySelector("input[name='p35']:checked").value;
+    var p335 = parseInt(p35);
+    var result1 = p331+p332+p333+p334+p335;
+    var result = result1*0.2;
+     //alert(result);
+    document.getElementById("pg23").innerHTML =result;
+}
+</script>
+
+<h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Senior Project 2</h3>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Evaluation Form </h3>
+<p><strong> Final Presentation (100% of total work, 40scores)</strong></p>
+<p><strong> Advisor (20 scores)</strong> &nbsp; &nbsp; &nbsp; Date.................................
+    Signature............................... </p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. The work covers everything in scopes</td>
+        <th> <input type="radio" name="t11" value="1"></th>
+        <th> <input type="radio" name="t11" value="2"></th>
+        <th> <input type="radio" name="t11" value="3"></th>
+        <th> <input type="radio" name="t11" value="4"></th>
+        <th> <input type="radio" name="t11" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students present and answer questions<br>
+            properly. Each student has a part in the
+            presentation.</td>
+        <th> <input type="radio" name="t12" value="1"></th>
+        <th> <input type="radio" name="t12" value="2"></th>
+        <th> <input type="radio" name="t12" value="3"></th>
+        <th> <input type="radio" name="t12" value="4"></th>
+        <th> <input type="radio" name="t12" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division<br>
+            (for group project) or a student plans his/her<br>
+            work properly (for individual project)</td>
+        <th> <input type="radio" name="t13" value="1"></th>
+        <th> <input type="radio" name="t13" value="2"></th>
+        <th> <input type="radio" name="t13" value="3"></th>
+        <th> <input type="radio" name="t13" value="4"></th>
+        <th> <input type="radio" name="t13" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. The work fulfills both academic and<br>
+            professional quality</td>
+        <th> <input type="radio" name="t14" value="1"></th>
+        <th> <input type="radio" name="t14" value="2"></th>
+        <th> <input type="radio" name="t14" value="3"></th>
+        <th> <input type="radio" name="t14" value="4"></th>
+        <th> <input type="radio" name="t14" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The work is 100% complete</td>
+        <th> <input type="radio" name="t15" value="1"></th>
+        <th> <input type="radio" name="t15" value="2"></th>
+        <th> <input type="radio" name="t15" value="3"></th>
+        <th> <input type="radio" name="t15" value="4"></th>
+        <th> <input type="radio" name="t15" value="5"></th>
+    </tr>
+    <tr>
+        <td align=center><strong> Total score (sum*0.8)</strong></td>
+        <th id = "fp1" colspan=5></th>
+    </tr>
+</table>
+<br>
+<button type ="button" onclick="getRadio31()">Calculate</button>
+<script>
+function getRadio31(){
+    var t11 =document.querySelector("input[name='t11']:checked").value;
+    var t111 = parseInt(t11);
+    var t12 =document.querySelector("input[name='t12']:checked").value;
+    var t112 = parseInt(t12);
+    var t13 =document.querySelector("input[name='t13']:checked").value;
+    var t113 = parseInt(t13);
+    var t14 =document.querySelector("input[name='t14']:checked").value;
+    var t114 = parseInt(t14);
+    var t15 =document.querySelector("input[name='t15']:checked").value;
+    var t115 = parseInt(t15);
+    var result1 = t111+t112+t113+t114+t115;
+    var result = result1*0.8;
+     //alert(result);
+    document.getElementById("fp1").innerHTML =result;
+}
+</script>
+
+<br><br><br>
+<!-- Committee 1 -->
+<p><strong> Committee 1 (10 scores)</strong> &nbsp; &nbsp; &nbsp; Date.................................
+    Signature............................... </p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. The work covers everything in scopes</td>
+        <th> <input type="radio" name="t21" value="1"></th>
+        <th> <input type="radio" name="t21" value="2"></th>
+        <th> <input type="radio" name="t21" value="3"></th>
+        <th> <input type="radio" name="t21" value="4"></th>
+        <th> <input type="radio" name="t21" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students present and answer questions<br>
+            properly. Each student has a part in the
+            presentation.</td>
+        <th> <input type="radio" name="t22" value="1"></th>
+        <th> <input type="radio" name="t22" value="2"></th>
+        <th> <input type="radio" name="t22" value="3"></th>
+        <th> <input type="radio" name="t22" value="4"></th>
+        <th> <input type="radio" name="t22" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division<br>
+            (for group project) or a student plans his/her<br>
+            work properly (for individual project)</td>
+        <th> <input type="radio" name="t23" value="1"></th>
+        <th> <input type="radio" name="t23" value="2"></th>
+        <th> <input type="radio" name="t23" value="3"></th>
+        <th> <input type="radio" name="t23" value="4"></th>
+        <th> <input type="radio" name="t23" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. The work fulfills both academic and<br>
+            professional quality</td>
+        <th> <input type="radio" name="t24" value="1"></th>
+        <th> <input type="radio" name="t24" value="2"></th>
+        <th> <input type="radio" name="t24" value="3"></th>
+        <th> <input type="radio" name="t24" value="4"></th>
+        <th> <input type="radio" name="t24" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The work is 100% complete</td>
+        <th> <input type="radio" name="t25" value="1"></th>
+        <th> <input type="radio" name="t25" value="2"></th>
+        <th> <input type="radio" name="t25" value="3"></th>
+        <th> <input type="radio" name="t25" value="4"></th>
+        <th> <input type="radio" name="t25" value="5"></th>
+    </tr>
+    <tr>
+        <td align=center><strong> Total score (sum*0.4)</strong></td>
+        <th id = "fp2"colspan=5></th>
+    </tr>
+</table>
+<br>
+<button type ="button" onclick="getRadio32()">Calculate</button>
+<script>
+function getRadio32(){
+    var t21 =document.querySelector("input[name='t21']:checked").value;
+    var t211 = parseInt(t21);
+    var t22 =document.querySelector("input[name='t22']:checked").value;
+    var t212 = parseInt(t22);
+    var t23 =document.querySelector("input[name='t23']:checked").value;
+    var t213 = parseInt(t23);
+    var t24 =document.querySelector("input[name='t24']:checked").value;
+    var t214 = parseInt(t24);
+    var t25 =document.querySelector("input[name='t25']:checked").value;
+    var t215 = parseInt(t25);
+    var result1 = t211+t212+t213+t214+t215;
+    var result = result1*0.4;
+     //alert(result);
+    document.getElementById("fp2").innerHTML =result;
+}
+</script>
+<br>
+<!-- Committee 2 -->
+<p><strong> Committee 2 (10 scores)</strong> &nbsp; &nbsp; &nbsp; Date.................................
+    Signature............................... </p>
+<table>
+    <tr>
+        <th>Topic</th>
+        <th>Very poor<br>(1)</th>
+        <th>Poor<br>(2)</th>
+        <th>Good<br>(3)</th>
+        <th>Very good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. The work covers everything in scopes</td>
+        <th> <input type="radio" name="t31" value="1"></th>
+        <th> <input type="radio" name="t31" value="2"></th>
+        <th> <input type="radio" name="t31" value="3"></th>
+        <th> <input type="radio" name="t31" value="4"></th>
+        <th> <input type="radio" name="t31" value="5"></th>
+    </tr>
+    <tr>
+        <td>2. The students present and answer questions<br>
+            properly. Each student has a part in the
+            presentation.</td>
+        <th> <input type="radio" name="t32" value="1"></th>
+        <th> <input type="radio" name="t32" value="2"></th>
+        <th> <input type="radio" name="t32" value="3"></th>
+        <th> <input type="radio" name="t32" value="4"></th>
+        <th> <input type="radio" name="t32" value="5"></th>
+    </tr>
+    <tr>
+        <td>3. There are good teamwork and job division<br>
+            (for group project) or a student plans his/her<br>
+            work properly (for individual project)</td>
+        <th> <input type="radio" name="t33" value="1"></th>
+        <th> <input type="radio" name="t33" value="2"></th>
+        <th> <input type="radio" name="t33" value="3"></th>
+        <th> <input type="radio" name="t33" value="4"></th>
+        <th> <input type="radio" name="t33" value="5"></th>
+    </tr>
+    <tr>
+        <td>4. The work fulfills both academic and<br>
+            professional quality</td>
+        <th> <input type="radio" name="t34" value="1"></th>
+        <th> <input type="radio" name="t34" value="2"></th>
+        <th> <input type="radio" name="t34" value="3"></th>
+        <th> <input type="radio" name="t34" value="4"></th>
+        <th> <input type="radio" name="t34" value="5"></th>
+    </tr>
+    <tr>
+        <td>5. The work is 100% complete</td>
+        <th> <input type="radio" name="t35" value="1"></th>
+        <th> <input type="radio" name="t35" value="2"></th>
+        <th> <input type="radio" name="t35" value="3"></th>
+        <th> <input type="radio" name="t35" value="4"></th>
+        <th> <input type="radio" name="t35" value="5"></th>
+    </tr>
+    <tr>
+        <td align=center><strong> Total score (sum*0.4)</strong></td>
+        <th id = "fp3"colspan=5></t>
+    </tr>
+</table>
+<br>
+<button type ="button" onclick="getRadio33()">Calculate</button>
+<script>
+function getRadio33(){
+    var t31 =document.querySelector("input[name='t31']:checked").value;
+    var t311 = parseInt(t31);
+    var t32 =document.querySelector("input[name='t32']:checked").value;
+    var t312 = parseInt(t32);
+    var t33 =document.querySelector("input[name='t33']:checked").value;
+    var t313 = parseInt(t33);
+    var t34 =document.querySelector("input[name='t34']:checked").value;
+    var t314 = parseInt(t34);
+    var t35 =document.querySelector("input[name='t35']:checked").value;
+    var t315 = parseInt(t35);
+    var result1 = t311+t312+t313+t314+t315;
+    var result = result1*0.4;
+     //alert(result);
+    document.getElementById("fp3").innerHTML =result;
+}
+</script>
+
+<h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Senior Project 2</h3>
+<h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Evaluation Form </h3>
+<p><strong> Final Document (20scores)</strong></p>
+<p id="txtad">Advisor (10 score)&nbsp; Date.................................
+    Signature............................... </p></p>
+<table id="tDisplay"></table>
+<table>
+    <tr>
+        <td>Topic</td>
+        <th>Very poor<br>(1)</th>
+        <th>Poor <br>(2)</th>
+        <th>Good <br>(3)</th>
+        <th>Very Good<br>(4)</th>
+        <th>Excellent<br>(5)</th>
+    </tr>
+    <tr>
+        <td>1. All contents are complete (cover,
+            acknowledgement, <br>abstract, content, chapters,
+            references, appendices and CV)</td>
+        <th><input type="radio" name="f1" value="1"></th>
+        <th><input type="radio" name="f1" value="2"></td>
+        <th><input type="radio" name="f1" value="3"></td>
+        <th><input type="radio" name="f1" value="4"></td>
+        <th><input type="radio" name="f1" value="5"></td>
+    </tr>
+    <tr>
+        <td>2.Writing language is proper and correct</td>
+        <th><input type="radio" name="f2" value="1"></th>
+        <th><input type="radio" name="f2" value="2"></td>
+        <th><input type="radio" name="f2" value="3"></td>
+        <th><input type="radio" name="f2" value="4"></td>
+        <th><input type="radio" name="f2" value="5"></td>
+    </tr>
+    <tr>
+        <td>3.Document format (font type, font size,
+            paragraph alignment, <br>page margin, citing and
+            references etc.) is proper and correct</td>
+        <th><input type="radio" name="f3" value="1"></th>
+        <th><input type="radio" name="f3" value="2"></td>
+        <th><input type="radio" name="f3" value="3"></td>
+        <th><input type="radio" name="f3" value="4"></td>
+        <th><input type="radio" name="f3" value="5"></td>
+    </tr>
+    <tr>
+        <td>4.The students correct all mistakes and improve<br>
+            the document as suggested in the final
+            presentation</td>
+        <th><input type="radio" name="f4" value="1"></th>
+        <th><input type="radio" name="f4" value="2"></td>
+        <th><input type="radio" name="f4" value="3"></td>
+        <th><input type="radio" name="f4" value="4"></td>
+        <th><input type="radio" name="f4" value="5"></td>
+
+    </tr>
+    <tr>
+        <td>5.The final document has a standard quality of
+            undergraduate <br>level and is worth publishing to
+            public</td>
+        <th><input type="radio" name="f5" value="1" onclick=""></th>
+        <th><input type="radio" name="f5" value="2"></td>
+        <th><input type="radio" name="f5" value="3"></td>
+        <th><input type="radio" name="f5" value="4"></td>
+        <th><input type="radio" name="f5" value="5"></td>
+    </tr>
+    <tr>
+        <td align="center"><strong>Total score (sum*0.4)</strong></td>
+        <th id="fd1" colspan="5"></th>
+    </tr>
+    <table>
+        <br>
+        <button type="button" onclick="getRadio41()">Calculate</button>
+        <script>
+            function getRadio41() {
+                var f1 = document.querySelector("input[name='f1']:checked").value;
+                var f111 = parseInt(f1);
+                var f2 = document.querySelector("input[name='f2']:checked").value;
+                var f122 = parseInt(f2);
+                var f3 = document.querySelector("input[name='f3']:checked").value;
+                var f133 = parseInt(f3);
+                var f4 = document.querySelector("input[name='f4']:checked").value;
+                var f144 = parseInt(f4);
+                var f5 = document.querySelector("input[name='f5']:checked").value;
+                var f155 = parseInt(f5);
+                var result1 = f111 + f122 + f133 + f144 + f155;
+                var result = result1 * 0.4;
+                //alert(result);
+                document.getElementById("fd1").innerHTML = result;
+            }
+        </script>
+        <br>
+        <br>
+        <p id="txtcom">Committee 1 (5 score) &nbsp;Date.................................
+            Signature............................... </p></p>
+        <table id="tDisplay"></table>
+        <table>
+            <tr>
+                <td>Topic</td>
+                <th>Very poor<br>(1)</th>
+                <th>Poor <br>(2)</th>
+                <th>Good <br>(3)</th>
+                <th>Very Good<br>(4)</th>
+                <th>Excellent<br>(5)</th>
+            </tr>
+            <tr>
+                <td>1. All contents are complete (cover,
+                    acknowledgement, <br>abstract, content, chapters,
+                    references, appendices and CV)</td>
+                <th><input type="radio" name="f21" value="1"></th>
+                <th><input type="radio" name="f21" value="2"></td>
+                <th><input type="radio" name="f21" value="3"></td>
+                <th><input type="radio" name="f21" value="4"></td>
+                <th><input type="radio" name="f21" value="5"></td>
+            </tr>
+            <tr>
+                <td>2.Writing language is proper and correct</td>
+                <th><input type="radio" name="f22" value="1"></th>
+                <th><input type="radio" name="f22" value="2"></td>
+                <th><input type="radio" name="f22" value="3"></td>
+                <th><input type="radio" name="f22" value="4"></td>
+                <th><input type="radio" name="f22" value="5"></td>
+            </tr>
+            <tr>
+                <td>3.Document format (font type, font size,
+                    paragraph alignment, <br>page margin, citing and
+                    references etc.) is proper and correct</td>
+                <th><input type="radio" name="f23" value="1"></th>
+                <th><input type="radio" name="f23" value="2"></td>
+                <th><input type="radio" name="f23" value="3"></td>
+                <th><input type="radio" name="f23" value="4"></td>
+                <th><input type="radio" name="f23" value="5"></td>
+            </tr>
+            <tr>
+                <td>4.The students correct all mistakes and improve<br>
+                    the document as suggested in the final
+                    presentation</td>
+                <th><input type="radio" name="f24" value="1"></th>
+                <th><input type="radio" name="f24" value="2"></td>
+                <th><input type="radio" name="f24" value="3"></td>
+                <th><input type="radio" name="f24" value="4"></td>
+                <th><input type="radio" name="f24" value="5"></td>
+
+            </tr>
+            <tr>
+                <td>5.The final document has a standard quality of
+                    undergraduate <br>level and is worth publishing to
+                    public</td>
+                <th><input type="radio" name="f25" value="1"></th>
+                <th><input type="radio" name="f25" value="2"></td>
+                <th><input type="radio" name="f25" value="3"></td>
+                <th><input type="radio" name="f25" value="4"></td>
+                <th><input type="radio" name="f25" value="5"></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Total score (sum*0.2)</strong></td>
+                <th id="fd2" colspan="5"></th>
+            </tr>
+        </table>
+    </table>
+    <br>
+    <button type="button" onclick="getRadio42()">Calculate</button>
+    <script>
+        function getRadio42() {
+            var f21 = document.querySelector("input[name='f21']:checked").value;
+            var f211 = parseInt(f21);
+            var f22 = document.querySelector("input[name='f22']:checked").value;
+            var f222 = parseInt(f22);
+            var f23 = document.querySelector("input[name='f23']:checked").value;
+            var f233 = parseInt(f23);
+            var f24 = document.querySelector("input[name='f24']:checked").value;
+            var f244 = parseInt(f24);
+            var f25 = document.querySelector("input[name='f25']:checked").value;
+            var f255 = parseInt(f25);
+            var result1 = f211 + f222 + f233 + f244 + f255;
+            var result = result1 * 0.2;
+            //alert(result);
+            document.getElementById("fd2").innerHTML = result;
+        }
+    </script>
+    <br>
+    <br>
+    <table>
+        <p id="txtcom2">Committee 2 (5 score)&nbsp;Date.................................
+            Signature............................... </p></p>
+        <table id="tDisplay"></table>
+        <table>
+            <tr>
+                <td>Topic</td>
+                <th>Very poor<br>(1)</th>
+                <th>Poor <br>(2)</th>
+                <th>Good <br>(3)</th>
+                <th>Very Good<br>(4)</th>
+                <th>Excellent<br>(5)</th>
+            </tr>
+            <tr>
+                <td>1. All contents are complete (cover,
+                    acknowledgement, <br>abstract, content, chapters,
+                    references, appendices and CV)</td>
+                <th><input type="radio" name="f31" value="1"></th>
+                <th><input type="radio" name="f31" value="2"></td>
+                <th><input type="radio" name="f31" value="3"></td>
+                <th><input type="radio" name="f31" value="4"></td>
+                <th><input type="radio" name="f31" value="5"></td>
+            </tr>
+            <tr>
+                <td>2.Writing language is proper and correct</td>
+                <th><input type="radio" name="f32" value="1"></th>
+                <th><input type="radio" name="f32" value="2"></td>
+                <th><input type="radio" name="f32" value="3"></td>
+                <th><input type="radio" name="f32" value="4"></td>
+                <th><input type="radio" name="f32" value="5"></td>
+            </tr>
+            <tr>
+                <td>3.Document format (font type, font size,
+                    paragraph alignment, <br>page margin, citing and
+                    references etc.) is proper and correct</td>
+                <th><input type="radio" name="f33" value="1"></th>
+                <th><input type="radio" name="f33" value="2"></td>
+                <th><input type="radio" name="f33" value="3"></td>
+                <th><input type="radio" name="f33" value="4"></td>
+                <th><input type="radio" name="f33" value="5"></td>
+            </tr>
+            <tr>
+                <td>4.The students correct all mistakes and improve<br>
+                    the document as suggested in the final
+                    presentation</td>
+                <th><input type="radio" name="f34" value="1"></th>
+                <th><input type="radio" name="f34" value="2"></td>
+                <th><input type="radio" name="f34" value="3"></td>
+                <th><input type="radio" name="f34" value="4"></td>
+                <th><input type="radio" name="f34" value="5"></td>
+
+            </tr>
+            <tr>
+                <td>5.The final document has a standard quality of
+                    undergraduate <br>level and is worth publishing to
+                    public</td>
+                <th><input type="radio" name="f35" value="1"></th>
+                <th><input type="radio" name="f35" value="2"></td>
+                <th><input type="radio" name="f35" value="3"></td>
+                <th><input type="radio" name="f35" value="4"></td>
+                <th><input type="radio" name="f35" value="5"></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Total score (sum*0.2)</strong></td>
+                <th id="fd3" colspan="5"></th>
+            </tr>
+        </table>
+        <br>
+        <button type="button" onclick="getRadio43()">Calculate</button>
+    <script>
+        function getRadio43() {
+            var f31 = document.querySelector("input[name='f31']:checked").value;
+            var f311 = parseInt(f31);
+            var f32 = document.querySelector("input[name='f32']:checked").value;
+            var f322 = parseInt(f32);
+            var f33 = document.querySelector("input[name='f33']:checked").value;
+            var f333 = parseInt(f33);
+            var f34 = document.querySelector("input[name='f34']:checked").value;
+            var f344 = parseInt(f34);
+            var f35 = document.querySelector("input[name='f35']:checked").value;
+            var f355 = parseInt(f35);
+            var result1 = f311 + f322 + f333 + f344 + f355;
+            var result = result1 * 0.2;
+            //alert(result);
+            document.getElementById("fd3").innerHTML = result;
+            
+        }
+    </script>
+   <h3 id="txtHead">SP2 Evaluation Result</h3>
+   <table width="40%">
+       <tr>
+           <td id="txtHide"></td>
+           <th id="txtBlack"> Progress 1 </th>
+           <th id="txtBlack"> Progress 2<br> </th>
+           <th id="txtBlack">Final
+               <br> Presentation </th>
+           <th id="txtBlack"> Final <br>Document </th>
+           <th id="txtBlack"> Total </th>
+       </tr>
+       <tr align="center">
+           <td id="txtHide"></td>
+           <td id="txtBlack"><strong>20</strong></td>
+           <td id="txtBlack"><strong>20</strong></td>
+           <td id="txtBlack"><strong>40</strong></td>
+           <td id="txtBlack"><strong>20</strong></td>
+           <td id="txtBlack"><strong>100</strong></td>
+       </tr>
+       <tr>
+           <td id="txtBlack" align="center" width=60px><strong>Score</strong></td>
+           <td id="txtBlack"></td>
+           <td id="txtBlack"></td>
+           <td id="txtBlack"></td>
+           <td id="txtBlack"></td>
+           <td id="txtBlack"></td>
+       </tr>
+   </table>
+   <br>
+   <h3>Advisor</h3>
+   <table width="10%">
+       <tr id="txtBlack" align="center">
+           <th><strong>Result (S/U)</strong></th>
+       </tr>
+       <td id="txtBlack" align="center" height="30px"> </td>
+   </table>
+</body>
+</html>

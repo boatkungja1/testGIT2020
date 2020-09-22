@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btlogin").click(function () {
+                if ($("#username").val() == 'admin' && $("#password").val() == '1234') {
+                    alert("Success");
+                }
+                else {
+                    alert("Fail");
+                }
+                $("#logout").click(function () {
+                    $("form")[0].reset();
+                    $("#first").show();
+                    $("#second").hide();
+                });
+            });
+            $("#btreset").click(function () {
+                $("#username").val("")
+                $("#password").val("")
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="first">
+        <form action="" method="post">
+            <input type="text" id="username" placeholder="Username" /><br><br>
+            <input type="password" id="password" placeholder="Password" /><br><br>
+            <input type="button" id="btlogin" value="Login" />
+            <input type="button" id="btreset" value="Reset" />
+        </form>
+    </div>
+    <div id="second">
+    </div>
+</body>
+</html>

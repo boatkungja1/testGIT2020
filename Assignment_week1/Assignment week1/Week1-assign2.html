@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        #counter {
+            font-size: 30px;
+            color: orange;
+            text-align: center;
+        }
+
+        .normal {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        input[type=button] {
+            font-size: 16px;
+        }
+
+        #btncount {
+            color: white;
+            background-color: green;
+        }
+        #btnreset{
+            color: white;
+            background-color: red;
+        }
+
+        .bcenter {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="counter">Counter = 0 </h1>
+    <p class="normal">My First Web App</p>
+    <p class="normal">I love coding!</p>
+    <div class="bcenter">
+        <input id="btncount" type="button" value="COUNT"> 
+        <input id="btnreset" type="button" value="RESET">
+    </div>
+    <script>
+        var count = 0;
+        const btncount = document.querySelector("#btncount");
+        btncount.addEventListener("click", function () {
+            count++;
+            const counter = document.querySelector("#counter");
+            counter.innerHTML = "Counter = " + count;
+
+        });
+
+
+        const btnreset = document.querySelector("#btnreset");
+        btnreset.addEventListener("click", function () {
+            count = 0;
+            counter.innerHTML = "Counter = " + 0;
+        })
+
+
+    </script>
+</body>
+
+</html>

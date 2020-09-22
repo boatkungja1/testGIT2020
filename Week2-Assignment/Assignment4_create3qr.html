@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+    <script src="./qrcode.min.js" async></script>
+</head>
+
+
+<body>
+    <input type="button" id="create" value="CREATE">
+    <table id="table"></table>
+    
+    <script>
+        const urls = ["http://www.mfu.ac.th","http://itschool.mfu.ac.th","http://reg.mfu.ac.th"];
+
+        const table = document.querySelector("#table");
+        const btnCreate = document.querySelector("#create");
+        btnCreate.addEventListener("click",makeQr);
+
+        function makeQr(){
+            let tr ="";
+
+            for(i in urls){
+                tr = `<br><tr id="qr_${i}"></tr><p>${urls[i]}</p>`
+                table.innerHTML += tr;
+
+            }
+            for(qrs in urls){
+                new QRCode(document.querySelector(`#qr_${qrs}`),urls[qrs]);
+            }
+        }
+    </script>
+</body>
+</html>

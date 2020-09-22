@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign 4</title>
+    <style>
+        h1 {
+            color: gray;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        body {
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator </h1>
+    <p>Number 1 : <input type="text" id="txtNumber1"> </p>
+    <p><button onclick="plus()">+</button> <button onclick="minus()">-</button> <button onclick="Multiply()">*</button>
+        <button onclick="Divide()">/</button></p>
+    <p>Number 2 : <input type="text" id="txtNumber2"> </p>
+    <script>
+
+        function plus() {
+            const txtNumber1 = document.querySelector("#txtNumber1");
+            const number1 = txtNumber1.value;
+            const txtNumber2 = document.querySelector("#txtNumber2");
+            const number2 = txtNumber2.value;
+
+
+            try {
+                if (isNaN(number1 || number2)) {
+                    throw "Is not Integer";
+                }
+            } catch (err) {
+                if (err == "Is not Integer") {
+                    alert("Input is not a number");
+                    return;
+                }
+            }
+
+
+            if (number1 == "" || number2 == "") {
+                alert("Incomplete Inputs");
+
+            } else {
+                var num1 = parseFloat(number1);
+                var num2 = parseFloat(number2);
+                const result = num1 + num2;
+                alert(number1 + "+" + number2 + " = " + result);
+            }
+
+
+
+
+
+
+        }
+        function minus() {
+            const txtNumber1 = document.querySelector("#txtNumber1");
+            const number1 = txtNumber1.value;
+            const txtNumber2 = document.querySelector("#txtNumber2");
+            const number2 = txtNumber2.value;
+            try {
+                if (isNaN(number1 || number2)) {
+                    throw "Is not Integer";
+                }
+            } catch (err) {
+                if (err == "Is not Integer") {
+                    alert("Input is not a number");
+                    return;
+                }
+            }
+
+
+            if (number1 == "" || number2 == "") {
+                alert("Incomplete Inputs");
+
+            } else {
+                var num1 = parseFloat(number1);
+                var num2 = parseFloat(number2);
+                const result = num1 - num2;
+                alert(number1 + "-" + number2 + " = " + result);
+            }
+
+
+
+        }
+        function Multiply() {
+            const txtNumber1 = document.querySelector("#txtNumber1");
+            const number1 = txtNumber1.value;
+            const txtNumber2 = document.querySelector("#txtNumber2");
+            const number2 = txtNumber2.value;
+            try {
+                if (isNaN(number1 || number2)) {
+                    throw "Is not Integer";
+                }
+            } catch (err) {
+                if (err == "Is not Integer") {
+                    alert("Input is not a number");
+                    return;
+                }
+            }
+
+
+            if (number1 == "" || number2 == "") {
+                alert("Incomplete Inputs");
+
+            } else {
+                var num1 = parseFloat(number1);
+                var num2 = parseFloat(number2);
+                const result = num1 * num2;
+                alert(number1 + "*" + number2 + " = " + result);
+            }
+
+
+        }
+        function Divide() {
+            const txtNumber1 = document.querySelector("#txtNumber1");
+            const number1 = txtNumber1.value;
+            const txtNumber2 = document.querySelector("#txtNumber2");
+            const number2 = txtNumber2.value;
+            try {
+                if (isNaN(number1 || number2)) {
+                    throw "Is not Integer";
+                }
+            } catch (err) {
+                if (err == "Is not Integer") {
+                    alert("Input is not a number");
+                    return;
+                }
+            }
+
+
+            if (number1 == "" || number2 == "") {
+                alert("Incomplete Inputs");
+
+            } else {
+                var num1 = parseFloat(number1);
+                var num2 = parseFloat(number2);
+                const result = num1 / num2;
+                alert(number1 + "/" + number2 + " = " + result);
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

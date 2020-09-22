@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Document</title>
+    <style>
+        table td,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .bcenter {
+            text-align: center;
+        }
+
+        #txtfinal {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #txtad {
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #txtcom {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #txtcom2 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bcenter">
+        <h1 id="h1">Senior Project 2</h1>
+        <h2 id="h2">Evalution Form</h2>
+    </div>
+    <p id="txtfinal">Final Document (20 score)</p>
+    <p id="txtad">Advisor (10 score)</p>
+    <table id="tDisplay"></table>
+    <table>
+        <tr>
+            <td>Topic</td>
+            <th>Very poor<br>(1)</th>
+            <th>Poor <br>(2)</th>
+            <th>Good <br>(3)</th>
+            <th>Very Good<br>(4)</th>
+            <th>Excellent<br>(5)</th>
+        </tr>
+        <tr>
+            <td>1. All contents are complete (cover,
+                acknowledgement, <br>abstract, content, chapters,
+                references, appendices and CV)</td>
+            <th><input type="radio" name="f1" value="1"></th>
+            <th><input type="radio" name="f1" value="2"></td>
+            <th><input type="radio" name="f1" value="3"></td>
+            <th><input type="radio" name="f1" value="4"></td>
+            <th><input type="radio" name="f1" value="5"></td>
+
+        </tr>
+        <tr>
+            <td>2.Writing language is proper and correct</td>
+            <th><input type="radio" name="f2" value="1"></th>
+            <th><input type="radio" name="f2" value="2"></td>
+            <th><input type="radio" name="f2" value="3"></td>
+            <th><input type="radio" name="f2" value="4"></td>
+            <th><input type="radio" name="f2" value="5"></td>
+
+        </tr>
+        <tr>
+            <td>3.Document format (font type, font size,
+                paragraph alignment, <br>page margin, citing and
+                references etc.) is proper and correct</td>
+            <th><input type="radio" name="f3" value="1"></th>
+            <th><input type="radio" name="f3" value="2"></td>
+            <th><input type="radio" name="f3" value="3"></td>
+            <th><input type="radio" name="f3" value="4"></td>
+            <th><input type="radio" name="f3" value="5"></td>
+        </tr>
+        <tr>
+            <td>4.The students correct all mistakes and improve<br>
+                the document as suggested in the final
+                presentation</td>
+            <th><input type="radio" name="f4" value="1"></th>
+            <th><input type="radio" name="f4" value="2"></td>
+            <th><input type="radio" name="f4" value="3"></td>
+            <th><input type="radio" name="f4" value="4"></td>
+            <th><input type="radio" name="f4" value="5"></td>
+
+
+        </tr>
+        <tr>
+            <td>5.The final document has a standard quality of
+                undergraduate <br>level and is worth publishing to
+                public</td>
+            <th><input type="radio" name="f5" value="1" onclick=""></th>
+            <th><input type="radio" name="f5" value="2"></td>
+            <th><input type="radio" name="f5" value="3"></td>
+            <th><input type="radio" name="f5" value="4"></td>
+            <th><input type="radio" name="f5" value="5"></td>
+        </tr>
+        <tr>
+            <td align="center"><strong>Total score (sum*0.4)</strong></td>
+            <th id="fd1" colspan="5"></th>
+        </tr>
+
+        <table>
+            <br>
+            <button type="button" onclick="getRadio41()">Calculate</button>
+
+            <script>
+                function getRadio41() {
+                    var f1 = document.querySelector("input[name='f1']:checked").value;
+                    var f111 = parseInt(f1);
+                    var f2 = document.querySelector("input[name='f2']:checked").value;
+                    var f122 = parseInt(f2);
+                    var f3 = document.querySelector("input[name='f3']:checked").value;
+                    var f133 = parseInt(f3);
+                    var f4 = document.querySelector("input[name='f4']:checked").value;
+                    var f144 = parseInt(f4);
+                    var f5 = document.querySelector("input[name='f5']:checked").value;
+                    var f155 = parseInt(f5);
+                    var result1 = f111 + f122 + f133 + f144 + f155;
+                    var result = result1 * 0.4;
+                    //alert(result);
+                    document.getElementById("fd1").innerHTML = result;
+                }
+            </script>
+            <br>
+            <br>
+            <p id="txtcom">Committee 1 (5 score)</p>
+            <table id="tDisplay"></table>
+            <table>
+                <tr>
+                    <td>Topic</td>
+                    <th>Very poor<br>(1)</th>
+                    <th>Poor <br>(2)</th>
+                    <th>Good <br>(3)</th>
+                    <th>Very Good<br>(4)</th>
+                    <th>Excellent<br>(5)</th>
+                </tr>
+                <tr>
+                    <td>1. All contents are complete (cover,
+                        acknowledgement, <br>abstract, content, chapters,
+                        references, appendices and CV)</td>
+                    <th><input type="radio" name="f21" value="1"></th>
+                    <th><input type="radio" name="f21" value="2"></td>
+                    <th><input type="radio" name="f21" value="3"></td>
+                    <th><input type="radio" name="f21" value="4"></td>
+                    <th><input type="radio" name="f21" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>2.Writing language is proper and correct</td>
+                    <th><input type="radio" name="f22" value="1"></th>
+                    <th><input type="radio" name="f22" value="2"></td>
+                    <th><input type="radio" name="f22" value="3"></td>
+                    <th><input type="radio" name="f22" value="4"></td>
+                    <th><input type="radio" name="f22" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>3.Document format (font type, font size,
+                        paragraph alignment, <br>page margin, citing and
+                        references etc.) is proper and correct</td>
+                    <th><input type="radio" name="f23" value="1"></th>
+                    <th><input type="radio" name="f23" value="2"></td>
+                    <th><input type="radio" name="f23" value="3"></td>
+                    <th><input type="radio" name="f23" value="4"></td>
+                    <th><input type="radio" name="f23" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>4.The students correct all mistakes and improve<br>
+                        the document as suggested in the final
+                        presentation</td>
+                    <th><input type="radio" name="f24" value="1"></th>
+                    <th><input type="radio" name="f24" value="2"></td>
+                    <th><input type="radio" name="f24" value="3"></td>
+                    <th><input type="radio" name="f24" value="4"></td>
+                    <th><input type="radio" name="f24" value="5"></td>
+
+
+                </tr>
+                <tr>
+                    <td>5.The final document has a standard quality of
+                        undergraduate <br>level and is worth publishing to
+                        public</td>
+                    <th><input type="radio" name="f25" value="1"></th>
+                    <th><input type="radio" name="f25" value="2"></td>
+                    <th><input type="radio" name="f25" value="3"></td>
+                    <th><input type="radio" name="f25" value="4"></td>
+                    <th><input type="radio" name="f25" value="5"></td>
+                </tr>
+                <tr>
+                    <td align="center"><strong>Total score (sum*0.2)</strong></td>
+                    <th id="fd2" colspan="5"></th>
+
+                </tr>
+            </table>
+        </table>
+        <br>
+        <button type="button" onclick="getRadio42()">Calculate</button>
+
+        <script>
+            function getRadio42() {
+                var f21 = document.querySelector("input[name='f21']:checked").value;
+                var f211 = parseInt(f21);
+                var f22 = document.querySelector("input[name='f22']:checked").value;
+                var f222 = parseInt(f22);
+                var f23 = document.querySelector("input[name='f23']:checked").value;
+                var f233 = parseInt(f23);
+                var f24 = document.querySelector("input[name='f24']:checked").value;
+                var f244 = parseInt(f24);
+                var f25 = document.querySelector("input[name='f25']:checked").value;
+                var f255 = parseInt(f25);
+                var result1 = f211 + f222 + f233 + f244 + f255;
+                var result = result1 * 0.2;
+                //alert(result);
+                document.getElementById("fd2").innerHTML = result;
+            }
+        </script>
+
+        <br>
+        <br>
+        <table>
+            <p id="txtcom2">Committee 2 (5 score)</p>
+            <table id="tDisplay"></table>
+            <table>
+                <tr>
+                    <td>Topic</td>
+                    <th>Very poor<br>(1)</th>
+                    <th>Poor <br>(2)</th>
+                    <th>Good <br>(3)</th>
+                    <th>Very Good<br>(4)</th>
+                    <th>Excellent<br>(5)</th>
+                </tr>
+                <tr>
+                    <td>1. All contents are complete (cover,
+                        acknowledgement, <br>abstract, content, chapters,
+                        references, appendices and CV)</td>
+                    <th><input type="radio" name="f31" value="1"></th>
+                    <th><input type="radio" name="f31" value="2"></td>
+                    <th><input type="radio" name="f31" value="3"></td>
+                    <th><input type="radio" name="f31" value="4"></td>
+                    <th><input type="radio" name="f31" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>2.Writing language is proper and correct</td>
+                    <th><input type="radio" name="f32" value="1"></th>
+                    <th><input type="radio" name="f32" value="2"></td>
+                    <th><input type="radio" name="f32" value="3"></td>
+                    <th><input type="radio" name="f32" value="4"></td>
+                    <th><input type="radio" name="f32" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>3.Document format (font type, font size,
+                        paragraph alignment, <br>page margin, citing and
+                        references etc.) is proper and correct</td>
+                    <th><input type="radio" name="f33" value="1"></th>
+                    <th><input type="radio" name="f33" value="2"></td>
+                    <th><input type="radio" name="f33" value="3"></td>
+                    <th><input type="radio" name="f33" value="4"></td>
+                    <th><input type="radio" name="f33" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td>4.The students correct all mistakes and improve<br>
+                        the document as suggested in the final
+                        presentation</td>
+                    <th><input type="radio" name="f34" value="1"></th>
+                    <th><input type="radio" name="f34" value="2"></td>
+                    <th><input type="radio" name="f34" value="3"></td>
+                    <th><input type="radio" name="f34" value="4"></td>
+                    <th><input type="radio" name="f34" value="5"></td>
+
+
+                </tr>
+                <tr>
+                    <td>5.The final document has a standard quality of
+                        undergraduate <br>level and is worth publishing to
+                        public</td>
+                    <th><input type="radio" name="f35" value="1"></th>
+                    <th><input type="radio" name="f35" value="2"></td>
+                    <th><input type="radio" name="f35" value="3"></td>
+                    <th><input type="radio" name="f35" value="4"></td>
+                    <th><input type="radio" name="f35" value="5"></td>
+                </tr>
+                <tr>
+                    <td align="center"><strong>Total score (sum*0.2)</strong></td>
+                    <th id="fd3" colspan="5"></th>
+                </tr>
+            </table>
+            <br>
+            <button type="button" onclick="getRadio43()">Calculate</button>
+
+        <script>
+            function getRadio43() {
+                var f31 = document.querySelector("input[name='f31']:checked").value;
+                var f311 = parseInt(f31);
+                var f32 = document.querySelector("input[name='f32']:checked").value;
+                var f322 = parseInt(f32);
+                var f33 = document.querySelector("input[name='f33']:checked").value;
+                var f333 = parseInt(f33);
+                var f34 = document.querySelector("input[name='f34']:checked").value;
+                var f344 = parseInt(f34);
+                var f35 = document.querySelector("input[name='f35']:checked").value;
+                var f355 = parseInt(f35);
+                var result1 = f311 + f322 + f333 + f344 + f355;
+                var result = result1 * 0.2;
+                //alert(result);
+                document.getElementById("fd3").innerHTML = result;
+            }
+        </script>
+
+
+
+
+
+</body>
+
+</html>
