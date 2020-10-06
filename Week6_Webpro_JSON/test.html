@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align: center;">The Attraction</h2>
+    <p style="text-align: center;">List of all the attraction</p>
+
+    <div class="container mt-3">
+        <div class="card">
+            <div class="row">
+                <div class="column">
+                    <img src="https://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/chiangrai/wat-rong-khun/pagePropertiesImage/wat-rong-khun-1.jpg.jpg"
+                        alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/chiangrai/wat-rong-khun/pagePropertiesImage/wat-rong-khun-1.jpg.jpg"
+                        alt="Forest" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://static.asiawebdirect.com/m/phuket/portals/thaiwave-com/homepage/chiangrai/wat-rong-khun/pagePropertiesImage/wat-rong-khun-1.jpg.jpg"
+                        alt="Forest" style="width:100%">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

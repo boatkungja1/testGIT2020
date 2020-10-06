@@ -12,18 +12,30 @@
         $(document).ready(function(){
             const fruit = '[{"name" : "apple"},{"name" : "banana"},{"name" : "orange"}]';
             const fruitObject = JSON.parse(fruit);
-            alert(fruitObject[1].name);
+            // alert(fruitObject[1].name);
 
+            let data = "";
+            for(let i=0; i<fruitObject.length; i++){
+                data += `<option value = ${fruitObject[i].name}>${fruitObject[i].name}</option>`
+            }
+
+            $("#fruit").html(data);
+            $("button").click(function(){
+                alert($("#fruit").val());
+            });
+            
         });
     </script>
 </head>
 
 
 <body>
-    <div class="container-fluid" >
+    <div class="container-fluid pt-3" >
         <select  id="fruit">
 
         </select>
+        <button class="btn btn-primary">Show</button>
+        
 
         
     </div>

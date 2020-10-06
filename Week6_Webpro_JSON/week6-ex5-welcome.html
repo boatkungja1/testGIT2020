@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log out</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if(sessionStorage.username != undefined){
+                $("h3").html("Welcome <strong>" + sessionStorage.username + "</strong>");
+            }
+
+            $("button").click(function () {
+                sessionStorage.removeItem("username");
+                window.location.replace("week6_exercise4.html");
+            });
+        });
+    </script>
+    
+</head>
+
+
+<body>
+    <div class="container-fluid pt-3">
+        <h1>Welcome</h1>
+        <button class="btn btn-success">Log out</button>
+
+    </div>
+</body>
+
+</html>
